@@ -140,6 +140,7 @@
     --white: #FFFFFF;
     --light-gray: #f1f1f1;
     --mclaren-orange: #FF8700;
+    --mclaren-black: #333;
     
 }
 
@@ -150,6 +151,9 @@ body, html {
 }
 
 header {
+    position: absolute;
+    top: 0;
+    z-index: 10000;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -158,21 +162,21 @@ header {
 
 nav {
     display: flex;
-    background-color: #eeeeee;
+    background-color: rgba(51, 51, 51, 0.5);
     padding: 0px;
     text-align: center;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
     top: 0;
     z-index: 100;
 }
 
 nav a {
-    color: black; 
+    color: var(--light-gray); 
     transition: color 0.3s ease; 
     padding: 10px;
     text-decoration: none;
+
 }
 
 nav a:hover {
@@ -180,15 +184,15 @@ nav a:hover {
 }
 
 .logo {
-    font-size: 1.5em;
-    max-width: 200px;
-    max-height: 100px;
+    max-width: 250px;
+    max-height: 50px;
     font-weight: bold;
     font-family: 'robotobold';
 
 }
 
 .logo {
+    fill: var(--light-gray);
     transition: fill 0.2s ease-in-out;
 }
 
@@ -269,8 +273,9 @@ nav a:hover {
 }
 
 body {
-    position: absolute;
+    position: relative;
     right: 0;
+    top: 0;
     width: 100%;
     transition: 0.5s;
     z-index: 2;
@@ -278,26 +283,88 @@ body {
 
 body.active
 {
-    right: 100px; /* Adjust this to change the width of the menu */
+    right: 300px; /* Adjust this to change the width of the menu */
 }
 
 
 .hamburger-menu {
-    display: none;
+    display: flex; 
+    visibility: hidden;
     position: fixed;
-    top: 0;
+    top: 20%;
     right: 0;
-    width: 100px; /* Adjust this to change the width of the menu */
+    width: 300px; 
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: white;
     z-index: 1002;
-    transition: width 0.4s;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: transform 0.5s, visibility 0.5s;
+    transform: translateX(100%);
 }
 
-/* This class will be added to the menu when the button is clicked */
+/* Se va activa cand apesi pe buton */
 .hamburger-menu.active {
-    display: flex;
+    visibility: visible;
+    transform: translateX(0%);
 }
+
+
+.hamburger-menu h1 {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'robotobold';
+    color: black;
+    align-self: flex-start;
+    margin-left: 22%;
+    color: var(--mclaren-orange);
+}
+
+.hamburger-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: circle;
+    padding: 0;
+    gap: 10px;
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'robotobold';
+    color: black;
+}
+
+.hamburger-menu a:hover {
+    color: var(--mclaren-orange);
+}
+
+.hamburger-menu a::after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 135, 0));
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0px;
+    transition: 0.2s;
+}
+
+.hamburger-menu a::before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(255, 135, 0));
+    height: 2px;
+    width: 0%;
+    right: 0;
+    bottom: 0px;
+    transition: 0.2s;
+}
+
+
 
 
 /* Path: index.html */
@@ -336,15 +403,49 @@ body.active
     background: rgba(0, 0, 0, 0.5); 
 }
 
-.text {
-    /* Adjust these properties to position your text where you want it */
-    top: 50%;
-    left: 50%;
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:  "text" "explore";
+    gap: 200px;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
     color: white;
-    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.hero-content .text {
+    grid-area: text;
+    font-size: 4em; /* This changes the size of the text */
+    font-weight: bold; /* This makes the text bold */
+    font-family: 'robotobold'; /* This changes the font of the text */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5); /* This creates a more dim glow effect */
+}
+
+
+.hero-content .explore {
+    grid-area: explore;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px black;
+    border-radius: 5px;
+    padding: 12px 40px; /* This adds padding around the text */
+    font-size: 1.5em; 
+    font-family: 'robotothin'; 
+    color: #FFFFFF;
+    text-decoration: none; 
+    border: 2px solid #FF8700; 
+    transition: background-color 0.3s, color 0.3s; 
+    cursor: pointer;
+    border-radius: 20px;
 
 }
 
+.hero-content .explore:hover {
+    background-color: #FF8700; /* This changes the background color of the text when you hover over it */
+    color: #FFFFFF; /* This changes the color of the text when you hover over it */
+}
 
 /* Media Queries */
 
@@ -375,8 +476,10 @@ body.active
     .toggle {
         display: block;
     }
-    .hamburger-menu
-    /* Hide your regular navigation links */
+    .hamburger-menu .menu {
+        display: flex;
+    }
+
     nav ul {
         display: none;
     }
