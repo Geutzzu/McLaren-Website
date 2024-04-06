@@ -1,0 +1,384 @@
+
+@font-face {
+    font-family: 'robotobold_italic';
+    src: url('roboto-bolditalic-webfont.woff2') format('woff2'),
+         url('roboto-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotoitalic';
+    src: url('roboto-italic-webfont.woff2') format('woff2'),
+         url('roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotolight';
+    src: url('roboto-light-webfont.woff2') format('woff2'),
+         url('roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotolight_italic';
+    src: url('roboto-lightitalic-webfont.woff2') format('woff2'),
+         url('roboto-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  @font-face {
+    font-family: 'robotomedium';
+    src: url('./WebFontKit/roboto-medium-webfont.woff2') format('woff2'),
+         url('./WebFontKit/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  @font-face {
+    font-family: 'robotomedium_italic';
+    src: url('roboto-mediumitalic-webfont.woff2') format('woff2'),
+         url('roboto-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regular-webfont.woff2') format('woff2'),
+         url('roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotothin';
+    src: url('roboto-thin-webfont.woff2') format('woff2'),
+         url('roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotothin_italic';
+    src: url('roboto-thinitalic-webfont.woff2') format('woff2'),
+         url('roboto-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotoblack';
+    src: url('roboto-black-webfont.woff2') format('woff2'),
+         url('roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotoblack_italic';
+    src: url('roboto-blackitalic-webfont.woff2') format('woff2'),
+         url('roboto-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  
+  
+  
+  @font-face {
+    font-family: 'robotobold';
+    src: url('roboto-bold-webfont.woff2') format('woff2'),
+         url('roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+
+  :root {
+    --white: #FFFFFF;
+    --light-gray: #f1f1f1;
+    --mclaren-orange: #FF8700;
+    
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    display: flex;
+    background-color: #eeeeee;
+    padding: 0px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: black; 
+    transition: color 0.3s ease; 
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FF8700; /* McLaren Orange */
+}
+
+.logo {
+    font-size: 1.5em;
+    max-width: 200px;
+    max-height: 100px;
+    font-weight: bold;
+    font-family: 'robotobold';
+
+}
+
+.logo {
+    transition: fill 0.2s ease-in-out;
+}
+
+.logo:hover {
+    fill: var(--mclaren-orange);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'robotobold';
+}
+
+.menu a:after{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 135, 0));
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -2px;
+    transition: 0.2s;
+}
+
+.menu a:before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(255, 135, 0));
+    height: 2px;
+    width: 0%;
+    right: 0;
+    bottom: -2px;
+    transition: 0.2s;
+}
+
+.menu a:hover:after, .menu a:hover:before{
+    width: 50%;
+}
+
+.toggle /* Hamburger Menu */
+{
+    display: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+.toggle.active /* Close Menu */
+{
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+
+body {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+body.active
+{
+    right: 100px; /* Adjust this to change the width of the menu */
+}
+
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px; /* Adjust this to change the width of the menu */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1002;
+    transition: width 0.4s;
+}
+
+/* This class will be added to the menu when the button is clicked */
+.hamburger-menu.active {
+    display: flex;
+}
+
+
+/* Path: index.html */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay, .text {
+    position: absolute;
+    z-index: 1;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Add a background color to the overlay if you want */
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.text {
+    /* Adjust these properties to position your text where you want it */
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .toggle {
+        display: none;
+    }
+    .hamburger-menu {
+        display: none;
+        visibility: hidden;
+    }
+    body {
+        right: 0;
+    }
+    .menu {
+        display: flex;
+    }
+    nav ul {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .toggle {
+        display: block;
+    }
+    .hamburger-menu
+    /* Hide your regular navigation links */
+    nav ul {
+        display: none;
+    }
+}
+
