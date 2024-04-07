@@ -6,6 +6,10 @@
     <title>McLaren Racing - Home Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -125,8 +129,11 @@
             <div class="overlay"></div>
 
             <div class="hero-content">
-                <h1 class="text"> Welcome to the McLaren Formula 1 Website  </h1>
-                <button class="explore">Explore</button>
+                <h1 class="text"> Welcome to the <span>McLaren</span> Formula 1 Website <br>
+                <span class="subtext">Step into the world of exhilaration with us</span>
+                </h1>
+                
+                <button class="explore"><a href="#first-section">Explore</a></button>
                 
             </div>
             
@@ -140,6 +147,51 @@
             -->
         </div>
 
+        <div class="about" id="first-section">
+            <div class="about-left-side">
+                <h1>About <span>Us</span></h1>
+                <p>McLaren Racing Limited is a British motor racing team based at the McLaren Technology Centre, Woking, Surrey, England. McLaren is best known as a Formula One constructor and also has a history of competing in American open wheel racing as both an entrant and a chassis constructor, and has won the Canadian-American Challenge Cup (Can-Am) sports car racing championship. The team is the second oldest active Formula One team after Ferrari, where they compete as McLaren F1 Team. They are the second most successful team in Formula One history after Ferrari, having </p>
+                <div class="social-media">
+                    
+                    <button class="read-more"><a href="https://en.wikipedia.org/wiki/McLaren" target="_blank">Read More</a></button>
+                    <ul>
+                        <li><a href="https://www.facebook.com/McLaren.Racing" target="_blank"><i class="fab fa-facebook social-icon"></i></a></li>
+                        <li><a href="https://twitter.com/McLarenF1" target="_blank"><i class="fab fa-twitter social-icon"></i></a></li>
+                        <li><a href="https://www.instagram.com/mclaren/" target="_blank"><i class="fab fa-instagram social-icon"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/mclaren" target="_blank"><i class="fab fa-youtube social-icon"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <img class="about-right-side" src="assets/mcLarenPhoto2.jpg" alt="McLaren Racing">
+        </div>
+
+        <div class="news">
+            <h2>Stay up to date with the latest news</h2>
+            <h1>News</h1>
+            <div class="news-container">
+                <div class="card">
+                        <img src="assets/news1.jpg" alt="News 1">
+                        <div class="content">
+                            <h2>News 1</h2>
+                            <p>This is a short description for news 1.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/news2.jpg" alt="News 2">
+                        <div class="content">
+                            <h2>News 2</h2>
+                            <p>This is a short description for news 2.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/news3.jpg" alt="News 3">
+                        <div class="content">
+                            <h2>News 3</h2>
+                            <p>This is a short description for news 3.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
 
 
     </main>
