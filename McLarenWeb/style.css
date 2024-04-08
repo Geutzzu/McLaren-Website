@@ -432,8 +432,8 @@ body.active
     align-items: center;
     flex-direction: column;
     background-color: #FF8700;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .about-left-side h1 {
@@ -457,7 +457,6 @@ body.active
 .about img {
     right: 0;
     top: 0;
-    height: 100vh; /* Set the height to the viewport height */
     width: 50%;
     object-fit: cover;
 }
@@ -510,6 +509,7 @@ body.active
 }
 
 
+
 .read-more {
     background-color: var(--mclaren-orange);
     color: white;
@@ -524,10 +524,10 @@ body.active
     text-shadow: 0 0 5px rgba(232, 132, 12, 0.5), 0 0 10px rgba(232, 132, 12, 0.3), 0 0 15px rgba(232, 132, 12, 0.2), 0 0 20px rgba(232, 132, 12, 0.1); 
 }
 
-.read-more a {
-    font-size: 1.5em;
-
+.social-media .button-container {
+    width: 200px;
 }
+
 
 .read-more:hover {
     background-color: white;
@@ -535,6 +535,9 @@ body.active
     transform: scale(1.2);
 }
 
+.read-more:hover a:hover {
+    color: var(--mclaren-orange);
+}
 
 
 
@@ -544,28 +547,32 @@ body.active
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 20px;
 }
 
 .news h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color: var(--mclaren-orange);
     font-weight: bold;
+    text-align: center;
 }
 
 .news h1 {
     margin-top: -20px;
     font-weight: bold;
-    font-size: 5em;
+    font-size: 3.5em;
+    padding-bottom: 10px;
+    border-bottom: solid 5px var(--mclaren-orange);
 }
 
 .news-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     gap: 50px;
+    margin-top: 75px;
 
 }
 
@@ -574,29 +581,344 @@ body.active
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: white;
-    padding: 20px;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     cursor: pointer;
-    width: 400px;
-    height: auto;
+    width: 500px;
+    height: 550px;
+    border-bottom: #FF8700 solid 5px;
+    border-right: #FF8700 solid 5px;
+}
+
+.news-container a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: var(--mclaren-orange); /* Change this to the color you want */
+}
+
+.card:hover h2 {
+    color: white;
 }
 
 .card img {
     width: 100%;
     height: 250px;
-    border-radius: 10px;
+    justify-self: flex-start;
 }
 
+.card h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--mclaren-orange);
+    justify-self: flex-start;
+    text-align: start;
+}
+
+.card p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
 .content {
     display: flex;
+    height: 100vh;
+    justify-content: center;
     flex-direction: column;
+    align-items: start;
+    margin: 20px;
+    text-align: start;
+}
+
+
+.more {
+    margin-top: 100px;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: start;
+    max-width: 1800px;
+    border-radius: 50px;
+    background-color: var(--mclaren-orange);
+    margin-bottom: 100px;
+}
+
+.more .more-line {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    text-align: start;
+    width: 50%;
+
+}
+
+
+.more h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--mclaren-orange);
+    font-weight: bold;
+    border: none;
+    color: #FFFFFF;
+
+}
+
+.more p {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: start;
+
+}
+
+.more a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.take-action {
+    background: var(--mclaren-orange);
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, var(--mclaren-orange), #333);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    transition: background-position 0.3s ease-in-out;
+    font: 900;
+    font-size: 2.5em;
+}
+
+.take-action:hover {
+    background-position: -100% 0;
+}
+
+footer {
+    background-color: #333; /* Change to match your site's color scheme */
+    color: #fff; /* Change to match your site's color scheme */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+.team-logo {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
 
+.copyright {
+    margin: 0;
+}
+
+
+.footer-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 60px;
+}
+
+.footer-content p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-content .logo{
+    width: 20vw;
+    height: 50px;
+    fill: #FFFFFF; 
+}
+
+
+/*Team Section*/
+
+.introduction {
+    display: flex;
+    flex-wrap: wrap;
+ 
+    height: 600px;
+}
+
+.introduction-left, .introduction-right {
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.introduction-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF8700;
+}
+
+.introduction-left h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;
+    padding: 100px;
+}
+
+.introduction-left h1 span {
+    color: #FFFFFF;
+}
+
+.introduction-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.introduction-right .text {
+    height: 300px;
+    width: 35vw;
+}
+
+.introduction-rigt p {
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;
+    padding: 50px;
+
+}
+
+@keyframes spin {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.border {
+    position: relative;
+    z-index: 1;
+    margin-top: -10px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 50px);
+    background-size: 70px 70px;
+    animation: spin 20s linear infinite;
+}
+
+.team-drivers {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+
+.team-drivers-title {
+    border-right: #000 solid 2px;
+}
+
+.team-drivers h1 {
+    font-size: 3em;
+    font-weight: 900;
+    color: #333;
+    padding: 50px;
+    
+}
+.team-drivers-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.team-driver { /* denumirilea astea vor fi folosite si pentru staff si restu */
+    width: 1fr;
+}
+
+.team-driver img {
+    position:relative;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.team-driver-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.team-driver-image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.team-driver-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-driver-image:hover img {
+    transform: scale(1.1); 
+}
+
+.team-driver-image:hover::after {
+    opacity: 0;
+}
+
+.team-driver-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    padding: 5px;
+
+}
+
+.team-driver .small-arrow {
+    width: 25px;
+    height: 25px;
+    fill: var(--mclaren-orange);
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.team-driver:hover .small-arrow {
+    transform: rotate(0deg);
+} 
 
 /* Media Queries */
 
@@ -633,5 +955,81 @@ body.active
     nav ul {
         display: none;
     }
+    .more h1 {
+        font-size: 2em;
+    }
+    .more p {
+        font-size: 1em;
+    }
+    .take-action {
+        font-size: 1.5em;
+    }
+    .hero-content .text {
+        font-size: 2em;
+    }
+    .hero-content .subtext {
+        font-size: 0.5em;
+    }
+    .hero-content .explore {
+        font-size: 1em;
+    }
+    .about-left-side h1 {
+        font-size: 3em;
+    }
+    .about-left-side p {
+        font-size: 1.5em;
+    }
+    .news h2 {
+        font-size: 2em;
+    }
+    .news h1 {
+        font-size: 2.5em;
+    }
+    .social-media a {
+        font-size: 1.5em;
+    }
+
+    .footer-content p {
+        font-size: 1em;
+    }
+    .footer-content .logo {
+        width: 100px;
+    }
+
 }
+
+
+@media (max-width: 500px) {
+    .hero-content .text {
+        font-size: 1.5em;
+    }
+    .hero-content .subtext {
+        font-size: 0.5em;
+    }
+    .hero-content .explore {
+        font-size: 1em;
+    }
+    .about-left-side h1 {
+        font-size: 2em;
+    }
+    .about-left-side p {
+        font-size: 1em;
+    }
+    .news h2 {
+        font-size: 1.5em;
+    }
+    .news h1 {
+        font-size: 2em;
+    }
+    .social-media a {
+        font-size: 1em;
+    }
+    .footer-content p {
+        font-size: 0.5em;
+    }
+    .footer-content .logo {
+        width: 50px;
+    }
+}
+
 
