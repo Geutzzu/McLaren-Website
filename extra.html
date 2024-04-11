@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McLaren Racing - Home Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>McLaren Racing - Team Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="mediaqueries.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+    </head>
 <body>
     <header>
         <nav>
@@ -120,93 +121,37 @@
             </div>
         </nav>
     </header>
+
+
     <main>
-        <div class="hero-section">
-            <video class="hero-video" autoplay muted loop>
-                <source src="assets/McLaren-Intro.mp4" type="video/mp4">
-            </video>
-            <!-- Your hero section content goes here -->
-            <div class="overlay"></div>
-
-            <div class="hero-content">
-                <h1 class="text"> Welcome to the <span>McLaren</span> Formula 1 Website <br>
-                <span class="subtext">Step into the world of exhilaration with us</span>
-                </h1>
-                
-                <button class="explore"><a href="#first-section">Explore</a></button>
-                
-            </div>
-            
-            <!-- Va fi folosit ulterior
-            <ul class="social">
-                <li><a href="https://www.facebook.com/McLaren.Racing" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                <li><a href="https://twitter.com/McLarenF1" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a></li>
-                <li><a href="https://www.instagram.com/mclaren/" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/user/mclaren" target="_blank"><img src="assets/youtube.png" alt="Youtube"></a></li>
-            </ul>
-            -->
-        </div>
-
-        <div class="about" id="first-section">
-            <div class="about-left-side">
-                <h1>About <span>Us</span></h1>
-                <p>McLaren Racing Limited is a British motor racing team based at the McLaren Technology Centre in Woking, Surrey, England. McLaren is best known as a Formula One chassis constructor, the second oldest active team and the second most successful Formula One team after Ferrari, having won 183 races, 12 Drivers' Championships and 8 Constructors' Championships. McLaren also has a history of competing in American open wheel racing, as both an entrant and a chassis constructor, and has won the Canadian-American Challenge Cup (Can-Am) sports car racing championship. The team is a subsidiary of the McLaren Group, which owns a majority of the team.</p>
-                <div class="social-media">
-                    <a class="button-container"href="https://en.wikipedia.org/wiki/McLaren" target="_blank"><button class="read-more">Read More</button></a>
-                    <ul>
-                        <li><a href="https://www.facebook.com/McLaren.Racing" target="_blank"><i class="fab fa-facebook social-icon"></i></a></li>
-                        <li><a href="https://twitter.com/McLarenF1" target="_blank"><i class="fab fa-twitter social-icon"></i></a></li>
-                        <li><a href="https://www.instagram.com/mclaren/" target="_blank"><i class="fab fa-instagram social-icon"></i></a></li>
-                        <li><a href="https://www.youtube.com/user/mclaren" target="_blank"><i class="fab fa-youtube social-icon"></i></a></li>
-                    </ul>
+       <div class="extra">
+            <h1>FORMULA 1 DRIVER REACTION TEST</h1>
+            <p>Test your reaction time with the Formula 1 driver reaction test</p>
+            <div class="scores">
+                <div class="score-container">
+                    <h2>SCORE</h2>
+                    <p id="reaction-time">0 ms</p>
+                </div>
+                <div class="best-score-container">
+                    <h2>BEST SCORE</h2>
+                    <p id="best-reaction-time">0 ms</p>
                 </div>
             </div>
-            <img class="about-right-side" src="assets/mcLarenPhoto2.jpg" alt="McLaren Racing">
-        </div>
-
-        <div class="news">
-            <h2>- NEWS -</h2>
-            <h1>Stay up to date with the latest news</h1>
-            <div class="news-container">
-                <a href="https://www.independent.co.uk/f1/mclaren-zak-brown-red-bull-alpha-tauri-b2480076.html" target="_blank">
-                    <div class="card">
-                        <img src="assets/news1.jpg" alt="News 1">
-                        <div class="content">
-                            <h2>NEWS</h2>
-                            <p>McLaren owner Brown concerned by Red Bull and AlphaTauri relationship. Zak Brown says track-limits fiasco must never happen again.</p>
-                        </div>
+            <div class="game-container">
+                <div class="work-in-progress"> 
+                    <div class="animation-container">
+                        <img class="hammer" src="assets/hammer.png" alt="hammer">
+                        <img class="sparks" src="assets/sparks.png" alt="sparks">
+                        <img class="anvil" src="assets/anvil.png" alt="anvil">
                     </div>
-                </a>
-                <a href="https://www.formula1.com/en/latest/article/tech-analysis-how-mclaren-have-taken-their-impressive-2023-updates-to.59n4myEjqhTai8yadbAMBs" target="_blank">
-                    <div class="card">
-                        <img src="assets/news2.jpg" alt="News 2">
-                        <div class="content">
-                            <h2>TECHNICAL</h2>
-                            <p>TECH ANALYSIS: How McLaren have taken their impressive 2023 updates to another level on the MCL38.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.formula1.com/en/latest/article/norris-believes-pace-was-strong-enough-for-p2-in-australia-with-mclaren.6NPi8fSOIdX1zDRctCSmjS" target="_blank">
-                    <div class="card">
-                        <img src="assets/news3.jpg" alt="News 3">
-                        <div class="content">
-                            <h2>NEWS</h2>
-                            <p>Norris believes pace was strong enough for P2 in Australia with McLaren 'getting closer' to Ferrari and Red Bull.</p>
-                        </div>
-                    </div>
-                </a>
+                    <h2>Work in progress</h2>
+                    <p>This game is still in development. Please check back later.</p>
+                </div>
             </div>
-
-            <div class="more">
-                <div class="more-line">  <h1>Want to see more ?</h1>
-                    <p>Click the button on the right to see more news in the world of F1 and who knows maybe you will be in the sport for the long run.</p></div>
-                <a class="take-action" href="news.html">Join Us</a>
-
-
-            </div>
-
-        </div>
+       </div>
     </main>
+
+
 
     <footer>
         <div class="footer-content">
@@ -264,16 +209,17 @@
     </footer>
 
 </body>
+
 <div class="hamburger-menu">
-        <h1>Menu</h1>
-        <div class="menu">
-            <ul>
-                <li><span></span><a href="index.html">Home</a></li>
-                <li><span></span><a href="news.html">News</a></li>
-                <li><span></span><a href="team.html">Team</a></li>
-                <li><span></span><a href="contact.html">Standings</a></li>
-            </ul>
-        </div>
+    <h1>Menu</h1>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="extra.html">Extra</a></li>
+        </ul>
+    </div>
 </div>
 
 <script src="script.js"></script>
