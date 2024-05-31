@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="icon" href="assets/icon.ico" type="image/x-icon">
     </head>
+
 <body>
     <header>
         <nav>
@@ -126,18 +127,23 @@
     <main>
        <div class="extra">
             <h1>FORMULA 1 DRIVER REACTION TEST</h1>
-            <p>Test your reaction time with the Formula 1 driver reaction test</p>
+            <p>Test your reaction time and precision with the Formula 1 driver reaction test</p>
             <div class="scores">
                 <div class="score-container">
                     <h2>SCORE</h2>
-                    <p id="reaction-time">0 ms</p>
+                    <p id="reaction-time">0</p>
+                </div>
+                <div class="score-container">
+                    <h2>TIMER</h2>
+                    <p id="timer">0</p>
                 </div>
                 <div class="best-score-container">
                     <h2>BEST SCORE</h2>
-                    <p id="best-reaction-time">0 ms</p>
+                    <p id="best-reaction-time">0</p>
                 </div>
             </div>
-            <div class="game-container">
+            <canvas id="game-canvas"></canvas> <!-- canvas -->
+            <!-- <div class="game-container"> -- this is for the anvil animation
                 <div class="work-in-progress"> 
                     <div class="animation-container">
                         <img class="hammer" src="assets/hammer.png" alt="hammer">
@@ -147,8 +153,21 @@
                     <h2>Work in progress</h2>
                     <p>This game is still in development. Please check back later.</p>
                 </div>
+            </div> -->
+            <div class="game-buttons">
+                <button id="start-game">Start Game</button>
+                <button id="reset-game">Reset Game</button>
+            </div>
+
+
+            <div id="scores-achieved"></div>
+
+            <div class="logout-container">
+                <button id="logout-button">Logout</button>
+                <div id="user-name"></div>
             </div>
        </div>
+       
     </main>
 
 
@@ -208,19 +227,29 @@
         </div>
     </footer>
 
+
+    <div class="hamburger-menu">
+        <h1>Menu</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script>
+        if (!localStorage.getItem("username")) {
+            window.location.href = "loginMenu.html";
+            document.body.style.display = "none"; /// sa nu faca bugul ala ciudat
+         }
+    </script>
 </body>
 
-<div class="hamburger-menu">
-    <h1>Menu</h1>
-    <div class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="extra.html">Extra</a></li>
-        </ul>
-    </div>
-</div>
 
-<script src="script.js"></script>
+
 </html>
